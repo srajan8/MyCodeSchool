@@ -27,6 +27,7 @@ Node* insertStart(Node * head, int data) {
     if(head == NULL) return newNode;
     newNode->link =  head;
     head = newNode;
+    // printf("Inserted %c\n", data);
 }
 
 Node* insertEnd(Node * head, int data) {
@@ -76,6 +77,22 @@ Node * deleteN(Node* head, int pos) {
     return head;
 }
 
+Node * deleteStart(Node* head) {
+    Node* temp =head;
+    if(temp == NULL) {
+        cout << "Empty Stack\n";
+        return head;
+    }
+    // cout << "Deleted: " << head->data << endl;
+    if(temp->link == NULL) {
+        free(temp);
+        return temp;
+    }
+    head = head->link;
+    free(temp);
+    return head;
+}
+
 void reverseP(Node* temp) {
     if(temp != NULL) {
         reverseP(temp->link);
@@ -110,56 +127,43 @@ void revRecursion(Node* head) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-int main(void) {
-    clear();
-    // cout << "Link is Working";
+// int main(void) {
+//     clear();
+//     // cout << "Link is Working";
     
 
-    // Head = insertEnd(Head, 5); // display(Head);
-    // Head = insertStart(Head, 15); // display(Head);
-    // Head = insertEnd(Head, 25); // display(Head);
-    // Head = insertStart(Head, 35); // display(Head);
-    // Head = insertEnd(Head, 45); // display(Head);
-    // cout << endl << endl;
-    // cout << Head->data << "\t" << Head->link->data;
+//     // Head = insertEnd(Head, 5); // display(Head);
+//     // Head = insertStart(Head, 15); // display(Head);
+//     // Head = insertEnd(Head, 25); // display(Head);
+//     // Head = insertStart(Head, 35); // display(Head);
+//     // Head = insertEnd(Head, 45); // display(Head);
+//     // cout << endl << endl;
+//     // cout << Head->data << "\t" << Head->link->data;
 
-    // Head = insertN(Head, 10, 4); // display(Head);
-    // Head = insertN(Head, 20, 2); // display(Head);
-    // Head = insertN(Head, 100, 20); // display(Head); Overflow
-    // cout << endl << endl;
-
-
-    // Head = deleteN(Head, 5); //display(Head); removes 10
-    // Head = deleteN(Head, 1); //display(Head); removes 35
-
-    // cout << endl << endl;
-    // Head = reverseLL(Head);
-
-    Head = insertStart(Head, 5); // display(Head);
-    Head = insertStart(Head, 6); // display(Head);
-    Head = insertStart(Head, 4); // display(Head);
-    Head = insertStart(Head, 2); // display(Head);
-
-    // revRecursion(Head);
-    // display(Head); 
+//     // Head = insertN(Head, 10, 4); // display(Head);
+//     // Head = insertN(Head, 20, 2); // display(Head);
+//     // Head = insertN(Head, 100, 20); // display(Head); Overflow
+//     // cout << endl << endl;
 
 
+//     // Head = deleteN(Head, 5); //display(Head); removes 10
+//     // Head = deleteN(Head, 1); //display(Head); removes 35
+
+//     // cout << endl << endl;
+//     // Head = reverseLL(Head);
+
+//     Head = insertStart(Head, 5); // display(Head);
+//     Head = insertStart(Head, 6); // display(Head);
+//     Head = insertStart(Head, 4); // display(Head);
+//     Head = insertStart(Head, 2); // display(Head);
+
+//     // revRecursion(Head);
+//     // display(Head); 
 
 
 
 
-    return 0;
-}
+
+
+//     return 0;
+// }
