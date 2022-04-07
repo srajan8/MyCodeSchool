@@ -130,8 +130,6 @@ void revRecursion(Node* head) {
 // int main(void) {
 //     clear();
 //     // cout << "Link is Working";
-    
-
 //     // Head = insertEnd(Head, 5); // display(Head);
 //     // Head = insertStart(Head, 15); // display(Head);
 //     // Head = insertEnd(Head, 25); // display(Head);
@@ -139,31 +137,19 @@ void revRecursion(Node* head) {
 //     // Head = insertEnd(Head, 45); // display(Head);
 //     // cout << endl << endl;
 //     // cout << Head->data << "\t" << Head->link->data;
-
 //     // Head = insertN(Head, 10, 4); // display(Head);
 //     // Head = insertN(Head, 20, 2); // display(Head);
 //     // Head = insertN(Head, 100, 20); // display(Head); Overflow
 //     // cout << endl << endl;
-
-
 //     // Head = deleteN(Head, 5); //display(Head); removes 10
 //     // Head = deleteN(Head, 1); //display(Head); removes 35
-
 //     // cout << endl << endl;
 //     // Head = reverseLL(Head);
-
 //     Head = insertStart(Head, 5); // display(Head);
 //     Head = insertStart(Head, 6); // display(Head);
 //     Head = insertStart(Head, 4); // display(Head);
 //     Head = insertStart(Head, 2); // display(Head);
-
 //     // revRecursion(Head);
 //     // display(Head); 
-
-
-
-
-
-
 //     return 0;
 // }
